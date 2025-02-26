@@ -34,7 +34,8 @@ const GridItem = styled(Paper)(() => ({
     borderRadius: '100%',
     background: 'white',
     position: 'relative',
-    border: '2px solid cyan'
+    border: '2px solid white',
+    outline: '2px solid cyan'
   }));
   const ChartLine = styled(Box)(() => ({
     position: 'absolute',
