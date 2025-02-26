@@ -23,5 +23,7 @@
 - React, TypeScript, MUI (Material UI)
 
 # Actions taken
-1. run: npx create-react-app presence-timeline-app --template typescript
-2. 
+- 40 minutes - plan and build codebase scaffolding
+- 20 minutes - read Typescript and MUI documentation
+- 80 minutes - build out react components, manipulate data, and use typescript to test data along the way
+- 20 minutes - polish, style, and deploy.

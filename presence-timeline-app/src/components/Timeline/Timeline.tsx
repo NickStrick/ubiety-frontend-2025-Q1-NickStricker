@@ -108,4 +108,4 @@ const Timeline: React.FC<TimelineProps> = ({ presence, profiles }) => {
   );
 };
 
-export default Timeline; // Make sure to export the Timeline component
+export default Timeline; 
