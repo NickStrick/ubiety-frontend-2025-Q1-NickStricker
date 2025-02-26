@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import DefaultUser from '../../defaultUser.png';
 import { transform } from 'typescript';
 import { cursorTo } from 'readline';
+
 // This file displays the Profiles as well as all of the data point on our chart
 
 interface ProfileProps {
@@ -24,7 +25,7 @@ interface Interval {
     const days = (timeDiff / (1000 * 3600 * 24));
     return days;
   }
-//stylings
+//styled components for the profile
 const GridItem = styled(Paper)(() => ({
     padding: '10px',
     textAlign: 'center',
