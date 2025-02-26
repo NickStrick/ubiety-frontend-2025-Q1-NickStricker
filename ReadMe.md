@@ -2,7 +2,7 @@
 # Completed Solution
 
 ## head over to PlanningAndApproach.md for information about the completed solution
-[a relative link](PlanningAndApproach.md)
+[PlanningAndApproach.md](PlanningAndApproach.md)
 
 ## Overview  
 This code test is designed to give us insight into your coding abilities and how you approach solving problems. We want to see how you think through challenges and how your knowledge aligns with the skills outlined in our job description and the conversations we've had. We expect a working solution but encourage you not to spend more than a couple of hours on this task.
