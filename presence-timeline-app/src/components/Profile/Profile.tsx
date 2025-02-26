@@ -2,8 +2,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import DefaultUser from '../../defaultUser.png';
-import { transform } from 'typescript';
-import { cursorTo } from 'readline';
 
 // This file displays the Profiles as well as all of the data point on our chart
 
