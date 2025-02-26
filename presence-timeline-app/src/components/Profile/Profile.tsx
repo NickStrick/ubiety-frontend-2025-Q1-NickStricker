@@ -82,7 +82,7 @@ const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
           backgroundSize: 'cover', 
           backgroundPosition: 'center', 
           backgroundRepeat: 'no-repeat', 
-          outlineColor:`${profile.current_status == "present"?'#46a2da': 'lightgray'}`}}> 
+          outlineColor:`${profile.current_status === "present"?'#46a2da': 'lightgray'}`}}> 
 
         {profile.presence_intervals.map((int,index)=>{
             let intStartDate = int[0]
