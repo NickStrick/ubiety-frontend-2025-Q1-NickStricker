@@ -1,11 +1,8 @@
+// Here is the display of the chart and the dates on the chart
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
+import { ChartProps } from '../../testing/interfaces';
 
-// Here is the display of the chart and the dates on the chart
-
-interface ChartProps {
-    chartArray: Date[];
-}
 const ChartRowDate = styled(Box)(() => ({
     position: 'absolute',
     top: '-12px',

@@ -1,44 +1,12 @@
+// In this file we process all the data and render the chart and profiles after processing the data
 import React from 'react';
 import Box from '@mui/material/Box'; 
 import Chart from '../Chart/Chart'
 import ProfileElem from '../Profile/Profile'
-
-// In this file we process all the data and render the chart and profiles after processing the data
+import { TimelineProps, PresenceDictionary, Profile, Presence, Interval } from '../../testing/interfaces';
 
 let chartStartEnd: Date[] = []
-// Interfaces built for data testing
-interface TimelineProps {
-  profiles: Profile[];
-  presence: PresenceDictionary
-}
-  
-  interface PresenceDictionary {
-    [key: string]: {
-      presence_intervals: number[][];
-      current_status: string;
-    };
-  }
-  // Profile interval 
-interface Interval {
-  category: string | null;
-  created_at: number;
-  photo_url: string | null;
-  uid: number;
-  name: string;
-  current_status:string
-  presence_intervals: Date[][]
-}
-interface Profile {
-  category: string | null;
-  created_at: number;
-  photo_url: string | null;
-  uid: number;
-  name: string;
-}
-interface Presence {
-  current_status:string;
-  presence_intervals:number[][];
-}
+
 function daysSince(date1:Date, date2:Date) {
   const timeDiff = Math.abs(date2.getTime() - date1.getTime());
   const days = (timeDiff / (1000 * 3600 * 24));
