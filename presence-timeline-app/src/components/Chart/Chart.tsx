@@ -18,7 +18,7 @@ const Chart: React.FC<ChartProps> = ({chartArray}) => {
     <Box >
         {chartArray.map((date, index)=>{
             return(<Box key={`chartsectoin${index}`} sx={{ marginLeft:'90px',marginTop:'10px', position: 'relative', width: '100%', background: 'whitesmoke', minHeight: '50px' , borderTop: '1px solid gray'}}>
-            <ChartRowDate>{date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate()}</ChartRowDate>
+            <ChartRowDate>{ (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear() }</ChartRowDate>
         </Box>)
         })
         }

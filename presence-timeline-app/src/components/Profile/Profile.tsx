@@ -2,6 +2,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import DefaultUser from '../../defaultUser.png';
+import { transform } from 'typescript';
+import { cursorTo } from 'readline';
 // This file displays the Profiles as well as all of the data point on our chart
 
 interface ProfileProps {
@@ -35,14 +37,21 @@ const GridItem = styled(Paper)(() => ({
     background: 'white',
     position: 'relative',
     border: '3px solid white',
-    outline: '3px solid #46a2da'
+    outline: '3px solid #46a2da',
+    '&:hover': {
+      cursor: 'pointer',
+      boxShadow: '0px 0px 10px 1px darkblue !important',
+    },
+    '&:hover > .chart-line, &:hover > .chart-line:after, &:hover > .chart-line:before':{
+      backgroundColor: 'cyan'
+    }
   }));
   const ChartLine = styled(Box)(() => ({
     position: 'absolute',
     zIndex:'1000',
     background: 'blue',
     width: '2px',
-    boxShadow: '0px 0px 1px 1px #46a2da',
+    boxShadow: '0px 0px 1px 1px lightblue',
 
   }));
   const ProfileName = styled(Box)(() => ({
@@ -60,7 +69,7 @@ const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
             let difference: any = daysSince(intStartDate, intEndDate).toFixed(2)
             let lengthFromStart: any = daysSince(chartArray[0], intStartDate).toFixed(2)
             return (
-                <ChartLine key={`chartline${index}`}   sx={{ height: `${60 * difference}px`, bottom: `-${(60 * lengthFromStart) + 13}px`,
+                <ChartLine className="chart-line" key={`chartline${index}`}   sx={{ height: `${60 * difference}px`, bottom: `-${(60 * lengthFromStart) + 13}px`,
                 "&::after": {
                     content: '""',
                     position: "absolute",
