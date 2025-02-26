@@ -99,7 +99,7 @@ const Timeline: React.FC<TimelineProps> = ({ presence, profiles }) => {
   const renderProfile = (profile: Interval) => (<ProfileElem profile={profile} chartArray={chartArray}/>);
 
   return (
-    <Box sx={{ background: 'whitesmoke', position: 'relative', width: '100%', minWidth: '880px', overflow: 'auto', height: '100vh', paddingTop:'50px', margin: '0 auto'}}>
+    <Box sx={{ background: 'whitesmoke', position: 'relative', width: '100%', minWidth: '920px', overflow: 'auto', height: '100vh', paddingTop:'70px', margin: '0 auto'}}>
       <Box sx={{ display: 'flex', flexDirection: 'row', gap:'20px', justifyContent: 'center', position: 'relative', width: '100%'}}>
         {processedData.map(renderProfile)}
       </Box>

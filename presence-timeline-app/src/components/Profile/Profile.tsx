@@ -34,21 +34,21 @@ const GridItem = styled(Paper)(() => ({
     borderRadius: '100%',
     background: 'white',
     position: 'relative',
-    border: '2px solid white',
-    outline: '2px solid cyan'
+    border: '3px solid white',
+    outline: '3px solid #46a2da'
   }));
   const ChartLine = styled(Box)(() => ({
     position: 'absolute',
     zIndex:'1000',
     background: 'blue',
     width: '2px',
-    boxShadow: '0px 0px 1px 1px cyan',
+    boxShadow: '0px 0px 1px 1px #46a2da',
 
   }));
   const ProfileName = styled(Box)(() => ({
     position: 'absolute',
     zIndex:'1000',
-    bottom: 'calc(100% + 4px)',
+    bottom: 'calc(100% + 8px)',
     fontSize: '10px'
   }));
 const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
@@ -60,7 +60,7 @@ const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
             let difference: any = daysSince(intStartDate, intEndDate).toFixed(2)
             let lengthFromStart: any = daysSince(chartArray[0], intStartDate).toFixed(2)
             return (
-                <ChartLine  sx={{ height: `${60 * difference}px`, bottom: `-${(60 * lengthFromStart) + 10}px`,
+                <ChartLine  sx={{ height: `${60 * difference}px`, bottom: `-${(60 * lengthFromStart) + 13}px`,
                 "&::after": {
                     content: '""',
                     position: "absolute",
@@ -72,7 +72,7 @@ const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
                     borderRadius: "50%",
                     backgroundColor: "blue",
                     opacity: 1,
-                    borderColor:"lightblue"
+                    borderColor:"#46a2da"
                 },
                 "&::before": {
                     content: '""',
@@ -85,7 +85,7 @@ const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
                     borderRadius: "50%",
                     backgroundColor: "blue",
                     opacity: 1,
-                    borderColor:"lightblue"
+                    borderColor:"#46a2da"
                 },
             }}>
                 </ChartLine>
