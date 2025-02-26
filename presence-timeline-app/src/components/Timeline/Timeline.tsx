@@ -96,7 +96,7 @@ const Timeline: React.FC<TimelineProps> = ({ presence, profiles }) => {
     date.setDate(date.getDate() - 1);
     chartArray.push(date)
   }
-  const renderProfile = (profile: Interval) => (<ProfileElem profile={profile} chartArray={chartArray}/>);
+  const renderProfile = (profile: Interval) => (<ProfileElem key={profile.uid} profile={profile} chartArray={chartArray}/>);
 
   return (
     <Box sx={{ background: 'whitesmoke', position: 'relative', width: '100%', minWidth: '920px', overflow: 'auto', height: '100vh', paddingTop:'70px', margin: '0 auto'}}>

@@ -54,13 +54,13 @@ const GridItem = styled(Paper)(() => ({
 const Profile: React.FC<ProfileProps> = ({profile, chartArray}) => {
     return (
         <GridItem title={profile.name} sx={{ backgroundImage: `url(${profile.photo_url === null?DefaultUser:profile.photo_url})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}> 
-        {profile.presence_intervals.map((int)=>{
+        {profile.presence_intervals.map((int,index)=>{
             let intStartDate = int[0]
             let intEndDate = int[1]  
             let difference: any = daysSince(intStartDate, intEndDate).toFixed(2)
             let lengthFromStart: any = daysSince(chartArray[0], intStartDate).toFixed(2)
             return (
-                <ChartLine  sx={{ height: `${60 * difference}px`, bottom: `-${(60 * lengthFromStart) + 13}px`,
+                <ChartLine key={`chartline${index}`}   sx={{ height: `${60 * difference}px`, bottom: `-${(60 * lengthFromStart) + 13}px`,
                 "&::after": {
                     content: '""',
                     position: "absolute",
